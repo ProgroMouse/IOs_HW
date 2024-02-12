@@ -70,7 +70,7 @@ class ProfileHeaderView: UIView {
         statusTextField.layer.borderWidth = 1
         statusTextField.layer.cornerRadius = 12
         statusTextField.font = UIFont.systemFont(ofSize: 14, weight: .regular)
-        statusTextField.placeholder = "Waiting for something..."
+        statusTextField.placeholder = "  Waiting for something..."
         
         return statusTextField
     }()
