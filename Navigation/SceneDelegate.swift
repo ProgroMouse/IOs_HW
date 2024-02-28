@@ -16,13 +16,13 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let scene = (scene as? UIWindowScene) else { return }
         
         let window = UIWindow(windowScene: scene)
-
+        
         let feedViewController = FeedViewController()
         feedViewController.title = "Лента"
         feedViewController.view.backgroundColor = .lightGray
         
-        let profileViewController = ProfileViewController()
-        profileViewController.title = "Профиль"
+        let profileViewController = LoginViewController()
+//        profileViewController.title = "Profile"
         profileViewController.view.backgroundColor = .white
         
         let tabBarController = UITabBarController()
@@ -36,7 +36,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             UINavigationController(rootViewController: $0)
         }
         
-        tabBarController.selectedIndex = 0
+        tabBarController.selectedIndex = 1
         
         window.rootViewController = tabBarController
         window.makeKeyAndVisible()
