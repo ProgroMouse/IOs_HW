@@ -9,15 +9,9 @@ import UIKit
  
 final class PostTableViewCell: UITableViewCell {
     
-    static let id = "PostTableViewCell"
+    static let post = "PostTableViewCell"
     
-    private let postContentView: UIView = {
-        let postContentView = UIView()
-        postContentView.translatesAutoresizingMaskIntoConstraints = false
-        return postContentView
-    }()
-    
-    private let authorLabel: UILabel = {
+    private lazy var authorLabel: UILabel = {
         let authorLabel = UILabel()
         authorLabel.translatesAutoresizingMaskIntoConstraints = false
         authorLabel.font = UIFont.boldSystemFont(ofSize: 20)
@@ -26,16 +20,17 @@ final class PostTableViewCell: UITableViewCell {
         
         return authorLabel
     }()
-    private let descriptionText: UILabel = {
+    private lazy var descriptionText: UILabel = {
         let descriptionText = UILabel()
         descriptionText.translatesAutoresizingMaskIntoConstraints = false
         descriptionText.font = UIFont.systemFont(ofSize: 14)
         descriptionText.textColor = .systemGray
+//        0 - строки, переносятся пока не закончится текст
         descriptionText.numberOfLines = 0
         
         return descriptionText
     }()
-    private let postImageView: UIImageView = {
+    private lazy var postImageView: UIImageView = {
         let postImageView = UIImageView()
         let image = UIImage(named: "image1")
         postImageView.translatesAutoresizingMaskIntoConstraints = false
@@ -47,7 +42,7 @@ final class PostTableViewCell: UITableViewCell {
         return postImageView
     }()
     
-    private let likesLabel: UILabel = {
+    private lazy var likesLabel: UILabel = {
         let likesLabel = UILabel()
         likesLabel.translatesAutoresizingMaskIntoConstraints = false
         likesLabel.font = UIFont.systemFont(ofSize: 16)
@@ -56,7 +51,7 @@ final class PostTableViewCell: UITableViewCell {
         return likesLabel
     }()
     
-    private let viewsLabel: UILabel = {
+    private lazy var viewsLabel: UILabel = {
         let viewsLabel = UILabel()
         viewsLabel.translatesAutoresizingMaskIntoConstraints = false
         viewsLabel.font = UIFont.systemFont(ofSize: 16)
@@ -86,37 +81,37 @@ final class PostTableViewCell: UITableViewCell {
     
     private func addSubviews() {
        
-        postContentView.addSubview(authorLabel)
-        postContentView.addSubview(postImageView)
-        postContentView.addSubview(descriptionText)
-        postContentView.addSubview(likesLabel)
-        postContentView.addSubview(viewsLabel)
+        contentView.addSubview(authorLabel)
+        contentView.addSubview(postImageView)
+        contentView.addSubview(descriptionText)
+        contentView.addSubview(likesLabel)
+        contentView.addSubview(viewsLabel)
     }
     
     private func setupContraints() {
         
         NSLayoutConstraint.activate([
-
-            authorLabel.leadingAnchor.constraint(equalTo: postContentView.leadingAnchor, constant: 16),
-            authorLabel.trailingAnchor.constraint(equalTo: postContentView.trailingAnchor, constant: -16),
-            authorLabel.topAnchor.constraint(equalTo: postContentView.topAnchor, constant: 16),
             
-            postImageView.topAnchor.constraint(equalTo: authorLabel.bottomAnchor, constant: 12),
-            postImageView.leadingAnchor.constraint(equalTo: postContentView.leadingAnchor),
-            postImageView.trailingAnchor.constraint(equalTo: postContentView.trailingAnchor),
-            postImageView.heightAnchor.constraint(equalTo: postImageView.widthAnchor),
+            authorLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 16),
+            authorLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -16),
+            authorLabel.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 16),
             
-            descriptionText.topAnchor.constraint(equalTo: postImageView.bottomAnchor, constant: 16),
-            descriptionText.leadingAnchor.constraint(equalTo: postContentView.leadingAnchor, constant: 16),
-            descriptionText.trailingAnchor.constraint(equalTo: postContentView.trailingAnchor, constant: -16),
+            postImageView.topAnchor.constraint(equalTo: contentView.bottomAnchor, constant: 12),
+            postImageView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
+            postImageView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
+            postImageView.heightAnchor.constraint(equalTo: contentView.widthAnchor),
+            
+            descriptionText.topAnchor.constraint(equalTo: contentView.bottomAnchor, constant: 16),
+            descriptionText.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 16),
+            descriptionText.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -16),
             
             likesLabel.topAnchor.constraint(equalTo: descriptionText.bottomAnchor, constant: 16),
-            likesLabel.leadingAnchor.constraint(equalTo: postContentView.leadingAnchor, constant: 16),
-            viewsLabel.bottomAnchor.constraint(equalTo: postContentView.bottomAnchor, constant: -16),
+            likesLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 16),
+            viewsLabel.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -16),
             
             viewsLabel.topAnchor.constraint(equalTo: descriptionText.bottomAnchor, constant: 16),
-            viewsLabel.trailingAnchor.constraint(equalTo: postContentView.trailingAnchor, constant: -16),
-            viewsLabel.bottomAnchor.constraint(equalTo: postContentView.bottomAnchor, constant: -16),
+            viewsLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -16),
+            viewsLabel.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -16),
         ])
     }
     

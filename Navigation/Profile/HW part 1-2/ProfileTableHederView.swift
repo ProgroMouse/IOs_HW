@@ -6,7 +6,7 @@
 //
 
 import UIKit
-
+// В классе наследнике UIView возникла ошибка в кнопке, не смогла ее устранить(
 //class ProfileTableHederView: UIView {
 //        
 //    private let profileHeaderView: ProfileHeaderView = {

@@ -8,7 +8,7 @@
 import UIKit
 
 class FeedViewController: UIViewController {
-    private let secondPost = Post(title: "Пост")
+//    private let secondPost = Post(title: "Пост")
     
     private lazy var action1Button: UIButton = {
         let button1 = UIButton()
@@ -80,16 +80,16 @@ class FeedViewController: UIViewController {
 
 
     @objc private func tapButton1() {
-        let postVC = PostViewController()
-        postVC.post = secondPost
-        
-        navigationController?.pushViewController(postVC, animated: true)
+//        let postVC = PostViewController()
+//        postVC.post = Post
+//        
+        navigationController?.pushViewController(self, animated: true)
     }
     @objc private func tapButton2() {
-        let postVC = PostViewController()
-        postVC.post = secondPost
+//        let postVC = PostViewController()
+       //        postVC.post = Post
         
-        navigationController?.pushViewController(postVC, animated: true)
+        navigationController?.pushViewController(self, animated: true)
     }
     }
     

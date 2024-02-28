@@ -2,6 +2,8 @@ import UIKit
 
 class ProfileViewController: UIViewController {
     
+    var profileHeadV = ProfileHeaderView()
+    
     fileprivate let post = Post.make()
     
     private let tableView: UITableView = {
@@ -22,12 +24,17 @@ class ProfileViewController: UIViewController {
         tableView.register(PostTableViewCell.self, forCellReuseIdentifier: "Post")
     }
     
+    
     private func setupTableView() {
+        //        значение по умолчанию:
+        tableView.rowHeight = UITableView.automaticDimension
+        
         //         4. Указываем основные делегаты таблицы
-        tableView.delegate = self
-        tableView.dataSource = self
+//        tableView.delegate = self
+//        tableView.dataSource = self
         //
     }
+    
     private func setupUI() {
         view.addSubview(tableView)
         
@@ -40,28 +47,30 @@ class ProfileViewController: UIViewController {
         ])
     }
     
-    extension ProfileViewController: UITableViewDataSource, UITableViewDelegate {
-       
-        //        количество ячеек по количеству постов
-        func tableView(
-            _ tableView: UITableView,
-            numberOfRowsInSection section: Int
-        ) -> Int {
-            post.count /* можно поставить просто цифру -напр.4 */
-        }
-        
-        func tableView(
-            _ tableView: UITableView,
-            cellForRowAt indexPath: IndexPath
-        ) -> UITableViewCell {
-            guard let cell =
-                    tableView.dequeueReusableCell(withIdentifier:
-                                                    "Post", for: indexPath
-                    ) as? PostTableViewCell else { return UITableViewCell() }
-            let post = post[indexPath.row]
-            cell.configure(with: post)
-            return cell
-        }
-    }
+//        extension ProfileViewController: UITableViewDataSource {
+//    
+//            //        количество ячеек по количеству постов
+//            func tableView(
+//                _ tableView: UITableView,
+//                numberOfRowsInSection section: Int
+//            ) -> Int {
+//                post.count /* можно поставить просто цифру -напр.4 */
+//            }
+//    
+//            func tableView(
+//                _ tableView: UITableView,
+//                cellForRowAt indexPath: IndexPath
+//            ) -> UITableViewCell {
+//                guard let cell =
+//                        tableView.dequeueReusableCell(withIdentifier:
+//                                                        "Post", for: indexPath
+//                        ) as? PostTableViewCell else { return UITableViewCell() }
+//                let post = post[indexPath.row]
+//                cell.configure(with: post)
+//                return cell
+//            }
+//    extension ProfileViewController: UITableViewDelegate {
+//            }
+//    }
+    
 }
-

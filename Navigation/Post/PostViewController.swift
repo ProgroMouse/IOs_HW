@@ -10,11 +10,16 @@ import UIKit
 class PostViewController: UIViewController {
     var post: Post?
     
+    init(post: Post) {
+           super.init(nibName: nil, bundle: nil)
+           self.post = post
+       }
+    required init?(coder: NSCoder) {
+            fatalError("init(coder:) has not been implemented")
+        }
     override func viewDidLoad() {
         super.viewDidLoad()
-        if let post = post {
-            title = post.title
-        }
+      
         view.backgroundColor = .lightGray
         showBarButton()
     }

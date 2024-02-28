@@ -8,9 +8,8 @@
 import UIKit
 
 class ProfileHeaderView: UIView {
-    //   add imageView
+
     private lazy var avatarImageView: UIImageView = {
-        //    инициализация imageView
         let avatarImageView = UIImageView()
         avatarImageView.layer.cornerRadius = 60
         avatarImageView.image = UIImage(named: "mouse")
@@ -37,7 +36,7 @@ class ProfileHeaderView: UIView {
         let statusLabel = UILabel()
         statusLabel.translatesAutoresizingMaskIntoConstraints = false
         statusLabel.font = UIFont.systemFont(ofSize: 14, weight: .regular)
-        statusLabel.text = "Something..."
+        statusLabel.text = " Something..."
         
         return statusLabel
     }()
@@ -69,8 +68,7 @@ class ProfileHeaderView: UIView {
         statusTextField.layer.borderColor = UIColor.black.cgColor
         statusTextField.layer.borderWidth = 1
         statusTextField.layer.cornerRadius = 12
-        statusTextField.font = UIFont.systemFont(ofSize: 14, weight: .regular)
-        statusTextField.placeholder = "Waiting for something..."
+        statusTextField.placeholder = " Waiting for something..."
         
         return statusTextField
     }()
@@ -80,6 +78,7 @@ class ProfileHeaderView: UIView {
         
         setupHeaderUI()
         setupConstraints()
+ 
     }
     
     required init?(coder: NSCoder) {
