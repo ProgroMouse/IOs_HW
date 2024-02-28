@@ -9,6 +9,7 @@ import UIKit
 
 class PostViewController: UIViewController {
     var post: Post?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         if let post = post {
@@ -21,6 +22,7 @@ class PostViewController: UIViewController {
     private func showBarButton () {
         let button  = UIBarButtonItem(title: "Info", style: .plain, target: self, action: #selector(tapAction))
         navigationItem.rightBarButtonItem = button
+        
     }
     @objc private func tapAction() {
         let infoVC = InfoViewController()
