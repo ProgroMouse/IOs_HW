@@ -189,7 +189,7 @@ class LoginViewController: UIViewController {
     // MARK: - Actions
     @objc func willShowKeyboard(_ notification: NSNotification) {
            let keyboardHeight = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue.height
-           scrollView.contentInset.bottom += keyboardHeight ?? 0.0
+           scrollView.contentInset.bottom = keyboardHeight ?? 0.0
        }
        
        @objc func willHideKeyboard(_ notification: NSNotification) {
@@ -198,7 +198,8 @@ class LoginViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
             super.viewWillAppear(animated)
-            navigationController?.setNavigationBarHidden(true, animated: animated)
+//        убрать навигейшн бар
+//            navigationController?.setNavigationBarHidden(true, animated: animated)
             
             setupKeyboardObservers()
         }
@@ -210,8 +211,8 @@ class LoginViewController: UIViewController {
         }
     
     @objc private func buttonLogInPressed() {
-        let pro = ProfileTableHederView()
-        navigationController?.pushViewController(pro, animated: true)
+        let profileVC = ProfileViewController()
+        navigationController?.pushViewController(profileVC, animated: true)
     }
     
     private func setupKeyboardObservers() {

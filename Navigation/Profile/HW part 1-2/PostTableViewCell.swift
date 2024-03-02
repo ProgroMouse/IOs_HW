@@ -9,7 +9,7 @@ import UIKit
  
 final class PostTableViewCell: UITableViewCell {
     
-    static let post = "PostTableViewCell"
+    static let id = "PostTableViewCell"
     
     private lazy var authorLabel: UILabel = {
         let authorLabel = UILabel()
@@ -59,7 +59,12 @@ final class PostTableViewCell: UITableViewCell {
         
         return viewsLabel
     }()
-    
+//    нужно?:
+    override var intrinsicContentSize: CGSize {
+        CGSize(
+            width: UIView.noIntrinsicMetric, height: 100
+            )
+    }
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         

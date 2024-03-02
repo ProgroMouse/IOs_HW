@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		F102F01C2B7A647700C2EDB9 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F102F01B2B7A647700C2EDB9 /* LoginViewController.swift */; };
 		F13FE0452B640E8400DE09B1 /* ProfileHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F13FE0442B640E8400DE09B1 /* ProfileHeaderView.swift */; };
-		F13FE0472B640EE500DE09B1 /* ProfileTableHederView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F13FE0462B640EE500DE09B1 /* ProfileTableHederView.swift */; };
 		F13FE0492B67F58300DE09B1 /* media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F13FE0482B67F58300DE09B1 /* media.xcassets */; };
 		F1409FBA2AFA88F9007AB20B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1409FB92AFA88F9007AB20B /* AppDelegate.swift */; };
 		F1409FBC2AFA88F9007AB20B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1409FBB2AFA88F9007AB20B /* SceneDelegate.swift */; };
@@ -27,7 +26,6 @@
 /* Begin PBXFileReference section */
 		F102F01B2B7A647700C2EDB9 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		F13FE0442B640E8400DE09B1 /* ProfileHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeaderView.swift; sourceTree = "<group>"; };
-		F13FE0462B640EE500DE09B1 /* ProfileTableHederView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTableHederView.swift; sourceTree = "<group>"; };
 		F13FE0482B67F58300DE09B1 /* media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = media.xcassets; sourceTree = "<group>"; };
 		F1409FB62AFA88F9007AB20B /* Navigation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Navigation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1409FB92AFA88F9007AB20B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -109,7 +107,6 @@
 		F1FDE8392B8F475400523FD5 /* HW part 1-2 */ = {
 			isa = PBXGroup;
 			children = (
-				F13FE0462B640EE500DE09B1 /* ProfileTableHederView.swift */,
 				F1FDE8332B8D233B00523FD5 /* ProfileViewController.swift */,
 				F1FDE8352B8D238C00523FD5 /* PostTableViewCell.swift */,
 				F1409FFD2B26567F007AB20B /* Post.swift */,
@@ -190,7 +187,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				F1409FBE2AFA88F9007AB20B /* ViewController.swift in Sources */,
-				F13FE0472B640EE500DE09B1 /* ProfileTableHederView.swift in Sources */,
 				F1409FBA2AFA88F9007AB20B /* AppDelegate.swift in Sources */,
 				F1409FFC2B19FE0A007AB20B /* InfoViewController.swift in Sources */,
 				F13FE0452B640E8400DE09B1 /* ProfileHeaderView.swift in Sources */,

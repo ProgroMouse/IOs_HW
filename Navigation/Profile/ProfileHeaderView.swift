@@ -8,7 +8,7 @@
 import UIKit
 
 class ProfileHeaderView: UIView {
-
+    
     private lazy var avatarImageView: UIImageView = {
         let avatarImageView = UIImageView()
         avatarImageView.layer.cornerRadius = 60
@@ -36,7 +36,7 @@ class ProfileHeaderView: UIView {
         let statusLabel = UILabel()
         statusLabel.translatesAutoresizingMaskIntoConstraints = false
         statusLabel.font = UIFont.systemFont(ofSize: 14, weight: .regular)
-        statusLabel.text = " Something..."
+        statusLabel.text = " Waiting for something..."
         
         return statusLabel
     }()
@@ -47,9 +47,9 @@ class ProfileHeaderView: UIView {
         setStatusButton.setTitle("Set Status", for: .normal)
         setStatusButton.setTitleColor(.white, for: .normal)
         setStatusButton.backgroundColor = .systemBlue
-        setStatusButton.layer.cornerRadius = 4
+        setStatusButton.layer.cornerRadius = 10
         setStatusButton.layer.shadowOffset = CGSize(width: 4.0, height: 4.0)
-        setStatusButton.layer.shadowRadius = 4
+        setStatusButton.layer.shadowRadius = 10
         setStatusButton.layer.shadowColor = UIColor.black.cgColor
         setStatusButton.layer.shadowOpacity = 0.7
         setStatusButton.clipsToBounds = false
@@ -68,7 +68,7 @@ class ProfileHeaderView: UIView {
         statusTextField.layer.borderColor = UIColor.black.cgColor
         statusTextField.layer.borderWidth = 1
         statusTextField.layer.cornerRadius = 12
-        statusTextField.placeholder = " Waiting for something..."
+        statusTextField.placeholder = " Set your status.."
         
         return statusTextField
     }()
@@ -78,7 +78,8 @@ class ProfileHeaderView: UIView {
         
         setupHeaderUI()
         setupConstraints()
- 
+        
+        backgroundColor = .systemGray6
     }
     
     required init?(coder: NSCoder) {
@@ -110,12 +111,12 @@ class ProfileHeaderView: UIView {
             statusTextField.leadingAnchor.constraint(equalTo: avatarImageView.trailingAnchor, constant: 15),
             statusTextField.bottomAnchor.constraint(equalTo: setStatusButton.topAnchor, constant: -20),
             statusTextField.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -16),
-            statusTextField.heightAnchor.constraint(equalToConstant: 40),
+            statusTextField.heightAnchor.constraint(equalToConstant: 35),
             
             setStatusButton.topAnchor.constraint(equalTo: avatarImageView.bottomAnchor, constant: 16),
             setStatusButton.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 16),
             setStatusButton.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -16),
-            setStatusButton.heightAnchor.constraint(equalToConstant: 50),
+            setStatusButton.heightAnchor.constraint(equalToConstant: 40),
         ])
     }
     @objc private func buttonPressed(_ sender: Any) {
