@@ -101,12 +101,12 @@ final class PostTableViewCell: UITableViewCell {
             authorLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -16),
             authorLabel.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 16),
             
-            postImageView.topAnchor.constraint(equalTo: contentView.bottomAnchor, constant: 12),
+            postImageView.topAnchor.constraint(equalTo: authorLabel.bottomAnchor, constant: 12),
             postImageView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
             postImageView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
             postImageView.heightAnchor.constraint(equalTo: contentView.widthAnchor),
             
-            descriptionText.topAnchor.constraint(equalTo: contentView.bottomAnchor, constant: 16),
+            descriptionText.topAnchor.constraint(equalTo: postImageView.bottomAnchor, constant: 16),
             descriptionText.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 16),
             descriptionText.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -16),
             

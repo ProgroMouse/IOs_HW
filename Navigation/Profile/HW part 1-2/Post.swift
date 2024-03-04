@@ -22,7 +22,7 @@ extension Post {
                 title: "Новые факты о горах",
                 author: "Scientific Researcher",
                 description: " Новое исследование немецких ученых показывает, что высота крупнейших горных хребтов, таких как Анды или Гималаи, определяется не соотношением скоростей подъема и эрозии, как считалось ранее, а тектоническими силами, удерживающими горы на определенном уровне. Результаты опубликованы в журнале Nature.",
-                image: "image1",
+                image: "Image1",
                 likes: 10,
                 views: 15
             ),
@@ -30,7 +30,7 @@ extension Post {
                 title: "Снова мастер-класс в прямом эфире",
                 author: "Chef Сake PRO",
                 description: "Приготовим вкуснейшие пирожные на моем мастер-классе вместе",
-                image: "image2",
+                image: "Image2",
                 likes: 20,
                 views: 25
             ),
@@ -38,7 +38,7 @@ extension Post {
                 title: "Современное искусство",
                 author: "Modern Art",
                 description: "В чем смысл современного искусства и стоит ли на него тратить время?",
-                image: "image3",
+                image: "Image3",
                 likes: 30,
                 views: 35
             ),
@@ -46,7 +46,7 @@ extension Post {
                 title: "Жизненно...",
                 author: "Mother Teresa",
                 description: "Людям не хватает любви гораздо больше, чем хлеба... и этот голод самый сильный",
-                image: "image4",
+                image: "Image4",
                 likes: 40,
                 views: 45
             )
